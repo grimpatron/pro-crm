@@ -1,0 +1,117 @@
+.topbar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 126px
+  &__logo
+    display: flex
+    gap: 20px
+    &-wrapper
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 62px
+      height: 62px
+      border-radius: 10px
+      background: $bg-section-second
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15)
+    &-wrap
+      margin: auto
+    &-title
+      font-weight: bold
+      font-size: 18px
+      line-height: 28px
+    &-slogan
+      font-weight: 300
+      font-size: 12px
+      line-height: 18px
+  &__phone
+    display: flex
+    align-items: center
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    color: $color-phone
+    background: transparent
+    font-weight: 400
+    &:hover, 
+    &:hover span
+      transition: .2s all
+      color: $color-main
+    img
+      padding-right: 15px
+    span
+      padding-left: 4px
+      font-weight: bold
+      color: $color-black
+      font-size: 18px
+
+
+
+.main
+  padding-top: 30px
+  background: $bg-section-prime
+  padding-bottom: 118px
+  &__image
+    position: absolute
+    left: 500px
+    top: -67px
+  &__container
+    max-width: 360px
+    padding-left: 88px
+    position: relative
+  &__tite
+    width: 300px
+    font-size: 40px
+    font-weight: bold
+    line-height: 117.8%
+    margin: 0 0 20px
+  &__slogan
+    display: flex
+    align-items: center
+    font-weight: 500
+    font-size: 14px
+    margin-bottom: 45px
+    span
+      margin-right: 5px
+      font-weight: bold
+    &-counter
+      padding-left: 30px
+      position: relative
+      letter-spacing: 0.28px
+      &::before
+        position: absolute
+        content: ""
+        left: 0
+        top: -2px
+        width: 18px
+        height: 18px
+        background: url(../img/icons/star.svg)
+  &__text
+    width: 400px
+    font-weight: normal
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.02em
+    margin-bottom: 41px
+  &__result
+    display: flex
+    align-items: center
+    margin: 0 auto
+    width: 354px
+    height: 83px
+    background: $bg-section-second url(../img/bg-228.png) left no-repeat
+    background-size: 64px
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05)
+    border-radius: 15px
+    &-img
+      margin: 0 20px 0 18px
+      width: 26px
+      height: 26px
+    &-bg
+      display: flex
+      align-items: center
+    &-text
+      margin-left: 20px
+      line-height: 147%
+

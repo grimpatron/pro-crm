@@ -1,0 +1,62 @@
+.advantages
+  counter-reset: section
+  padding-bottom: 40px
+  &__title
+    font-size: 35px
+    margin: 96px 0 90px
+  &__block
+    margin-top: -50px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-around
+    &:nth-child(odd)::before
+      top: 20px
+      left: -280px
+      position: absolute
+      counter-increment: section
+      content: counter(section)
+      font-size: 400px
+      color: $color-number
+      font-weight: 300
+    &:nth-child(even)::before
+      top: 10px
+      left: 1110px
+      position: absolute
+      counter-increment: section
+      content: counter(section)
+      font-size: 400px
+      color: $color-number
+      font-weight: 300
+    &:nth-child(odd) .advantages__performance
+      order: 2
+      margin-right: -140px
+  &__performance
+    margin-left: -120px
+  &__info
+    width: 421px
+  &__name
+    position: relative
+    margin-bottom: 20px
+    padding-left: 30px
+    font-weight: bold
+    font-size: 22px
+    line-height: 22px
+    letter-spacing: 0.02em
+    color: $color-main
+    &::before
+      position: absolute
+      content: ""
+      background: $bg-arrows url(../img/arrow-top.svg) center no-repeat
+      left: 0px
+      width: 20px
+      height: 20px
+      border-radius: 50%
+  &__description
+    font-weight: normal
+    font-size: 16px
+    line-height: 27px
+    letter-spacing: 0.02em
+    color: #1A2340
+    span
+      font-weight: 500

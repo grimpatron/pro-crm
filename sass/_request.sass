@@ -1,0 +1,189 @@
+.request
+  position: relative
+  &-price
+    // .request__title
+      // margin-top: 50px
+    &::after
+      position: absolute
+      content: ""
+      background: url(../img/points.svg) no-repeat
+      right: 1296px
+      top: 360px
+      width: 475px
+      height: 145px
+    .request__form
+      background: $color-main url(../img/icon-bg-calculator.svg) no-repeat right -60px bottom -30px
+  &-payback
+    .request__title
+      margin-bottom: 54px
+    .request__form
+      background: $color-main url(../img/icon-bg-question.svg) no-repeat right 0px bottom 0px
+  &-choice
+    .request__form
+      background: $color-main url(../img/icon-bg-spreadsheet.svg) no-repeat right 0px bottom 0px
+  &-discount
+    .request__form
+      background: $color-main url(../img/icon-bg-percentage.svg) no-repeat right 0px bottom 0px
+  &__wrapper
+    display: flex
+  &__title
+    width: 432px
+  &__text
+    font-weight: normal
+    font-size: 18px
+    line-height: 155.8%
+  &__link
+    position: relative
+    margin-left: 70px
+    margin-top: 97px
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.02em
+    color: $color-main
+    border-bottom: 1px solid lighten($color-main, 20%)
+    &::before
+      content: ""
+      position: absolute
+      width: 55px
+      height: 55px
+      left: -70px
+      top: -12px
+      background: $bg-arrows url(../img/icon-spreadsheet.svg) no-repeat center
+      border-radius: 50%
+    &::after
+      content: ""
+      position: absolute
+      width: 25px
+      height: 55px
+      top: -15px
+      background: url(../img/icon-arrow-right.svg) no-repeat center
+  &__half
+    &-edit
+      margin-top: 40px
+  &__services
+    width: 417px
+    height: 226px
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    padding: 0 40px
+    border-radius: 20px
+    background: $bg-block
+    &-item
+      width: 100%
+      position: relative
+      font-size: 16px
+      line-height: 148%
+      color: $color-black
+      &:not(:last-child)::after
+        position: absolute
+        content: ""
+        width: 342px
+        bottom: -30px
+        left: 50%
+        transform: translateX(-50%)
+        height: 1px
+        background: $color-black
+        opacity: 0.1
+      &-img
+        vertical-align: middle
+        margin-right: 12px
+  &__consultation
+    position: relative
+    margin-left: 70px
+    width: 300px
+    font-size: 16px
+    &-action
+      margin-bottom: 9px
+      font-weight: 500
+      line-height: 165%
+    &-description
+      font-weight: 300
+      line-height: 156%
+    &::before
+      content: ""
+      position: absolute
+      width: 55px
+      height: 55px
+      left: -70px
+      background: $bg-arrows url(../img/icon-consultation.svg) no-repeat center
+      border-radius: 50%
+  &__percent
+    margin-top: 68px
+    position: relative
+    margin-left: 70px
+    width: 300px
+    font-size: 16px
+    font-weight: 300
+    line-height: 156%
+    & .strong
+      font-weight: bold
+    & .color
+      color: $color-main
+    &::before
+      content: ""
+      position: absolute
+      width: 55px
+      height: 55px
+      left: -70px
+      background: $bg-arrows url(../img/icon-percentage.svg) no-repeat center
+      border-radius: 50%
+  &__form
+    margin-left: 76px
+    color: $color-white
+    height: 100%
+    padding: 84px 300px 84px 95px
+    border-radius: 40px 0px 0px 40px
+    &-title
+      font-size: 18px
+      line-height: 163.8%
+      text-align: center
+      margin-bottom: 31px
+    &-label
+      font-size: 12px
+      text-align: left
+    &-wrap
+      padding: 8px 24px
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: left
+      background: rgba(255, 255, 255, .3)
+      border-radius: 10px
+      width: 338px
+      height: 80px
+      margin-bottom: 30px
+      input
+        color: $color-white
+        background: transparent
+        border: none
+        font-size: 18px
+        &::placeholder
+          color: $color-white
+    &-btn
+      width: 338px
+      margin-bottom: 22px
+      cursor: pointer
+      color: $color-main
+      &:hover
+        background-color: darken($color-white, 10%)
+    &-checkbox
+      margin-left: 39px
+      padding-left: 5px
+      user-select: none
+      cursor: pointer
+      &::before
+        content: ""
+        display: inline-block
+        width: 17px
+        height: 17px
+        margin-right: 8px
+        background-color: #F6F6F6
+        border-radius: 50%
+        vertical-align: middle
+
+input[type="checkbox"]
+  display: none
+
+input[type="checkbox"]:checked + label:before
+  background: #F6F6F6 url(../img/check.svg) no-repeat 4px 2px
