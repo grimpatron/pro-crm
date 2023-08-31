@@ -24,9 +24,7 @@
             <div class="topbar__logo-slogan">Интегратор «Битрикс24» и amoCRM</div>
           </div>
         </div>
-        <a class="topbar__phone" href="tel:+375336665070">
-          <img src="img/icon-phone.svg" alt="phone icon"> +375 (33) <span>666 50 70</span>
-        </a>
+        <a class="topbar__phone" href="tel:+375336665070">+375 (33) <span>666 50 70</span></a>
       </div>
 
       <div class="main__container">
@@ -36,7 +34,7 @@
         <div class="main__text">Изучим ваши бизнес-процессы и задачи, подберем под них CRM, после внедрения соберем данные и предложим улучшения.</div>
         <div class="main__result">
           <div class="main__result-bg">
-            <img class="main__result-img" src="img/notepad.svg" alt="result imgage">
+            <img class="main__result-img" src="img/icons/notepad.svg" alt="result imgage">
           </div>
           <div class="main__result-text"><b>Результат</b> — рост количества успешных сделок.</div>
         </div>
@@ -47,38 +45,36 @@
   
 
   <section class="request request-price">
-    <div class="container">
+    <div class="container request__container">
 
-      <div class="request__wrapper">
-
-        <div class="request__half">
-          <h2 class="section__title request__title">Узнайте стоимость <br> внедрения</h2>
-          <div class="request__services">
-            <a href="#" class="request__services-item"><img class="request__services-item-img" src="img/tasks.svg" alt="">Подберем CRM под ваши задачи </a>
-            <a href="#" class="request__services-item"><img class="request__services-item-img" src="img/introduction.svg" alt="">Рассчитаем стоимость внедрени</a>
-            <a href="#" class="request__services-item"><img class="request__services-item-img" src="img/payback.svg" alt="">Рассчитаем срок окупаемости CRM</a>
-          </div>
+      <div class="request-price__wrapper">
+        <h2 class="section__title request__title">Узнайте стоимость<br> внедрения</h2>
+        <div class="request-price__services">
+          <div class="request-price__service request-price__service--select">Подберем CRM под ваши задачи</div>
+          <div class="request-price__service request-price__service--calculate">Рассчитаем стоимость внедрени</div>
+          <div class="request-price__service request-price__service--payback">Рассчитаем срок окупаемости CRM</div>
         </div>
-        
-        <div class="request__half">
-          <form action="mailer/smart.php" method="POST" class="request__form">
-            <div class="request__form-title"><b>Заполните форму</b>, чтобы записаться на бесплатную консультацию.</div>
-            <div class="request__form-wrap">
-              <label class="request__form-label" for="phoneNumber">Введите ваш номер телефона:</label>
-              <input type="tel" name="phoneNumber" id="phoneNumber" class="request__form-control" required="required" title="" placeholder="+375 (__) ___-__-__">
+      </div>
+      
+      <div class="request-form__wrapper">
+        <form class="request-form" action="mailer/smart.php" method="POST">
+          <div class="request-form__title"><b>Заполните форму</b>, чтобы записаться на бесплатную консультацию.</div>
+          <fieldset class="request-form__fieldset">
+            <label class="request-form__label" for="phoneNumber">Введите ваш номер телефона:</label>
+            <div class="request-form__input-wrapper">
+              <input class="request-form__input" type="tel" name="phoneNumber" id="phoneNumber" required placeholder="+375  ( _ _ ) _ _ _-_ _-_ _">
             </div>
-            <button class="request__form-btn btn" type="submit">Оставить заявку на расчет</button>
-            <input type="checkbox" name="agree" id="request-consent-1">
-            <label class="request__form-checkbox" for="request-consent-1">Я согласен на обработку данных</label>
-          </form>
-        </div>
-        
+          </fieldset>
+          <button class="request-form__btn btn" type="submit">Оставить заявку на расчет</button>
+          <input type="checkbox" name="agree" id="request-consent-1">
+          <label class="request-form__checkbox" for="request-consent-1">Я согласен на обработку данных</label>
+        </form>
       </div>
       
     </div>
   </section>
   
-
+<!--
   <section class="business">
     <div class="container">
       <div class="business__wrapp">
@@ -202,8 +198,12 @@
 
     </div>
   </section>
-  
+-->
 
+
+<!-- Название секции request-price, request-payback, request-choice, ... -->
+<!-- Вместо request__half 1 -> request-price__wrapper -->
+<!-- Вместо request__half 2 -> request-form -->
   <section class="request request-payback">
     <div class="container">
 
@@ -234,6 +234,7 @@
       
     </div>
   </section>
+
 
   <!--
   <section class="comparison">
@@ -314,7 +315,7 @@
 
     </div>
   </section>
-  
+  -->
   <section class="request request-choice">
     <div class="container">
 
@@ -376,11 +377,17 @@
       
     </div>
   </section>
-  -->
 
-  <div class="scroll-down">
+
+  <!-- <div class="scroll-down">
     <div class="scroll-down__text">Листайте вниз</div>
-  </div>
+  </div> -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="">Разработка сайтов</div>
+    </div>
+  </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 

@@ -6,7 +6,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -432,6 +431,11 @@ textarea {
   resize: none;
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -445,40 +449,8 @@ body {
   font-family: Geometria;
 }
 
-@font-face {
-  font-family: "Geometria";
-  src: url("../../fonts/Geometria-Bold.eot");
-  src: url("../../fonts/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Geometria-Bold.woff2") format("woff2"), url("../../fonts/Geometria-Bold.woff") format("woff"), url("../../fonts/Geometria-Bold.ttf") format("truetype"), url("../../fonts/Geometria-Bold.svg#Geometria-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Geometria";
-  src: url("../../fonts/Geometria-Medium.eot");
-  src: url("../../fonts/Geometria-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Geometria-Medium.woff2") format("woff2"), url("../../fonts/Geometria-Medium.woff") format("woff"), url("../../fonts/Geometria-Medium.ttf") format("truetype"), url("../../fonts/Geometria-Medium.svg#Geometria-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Geometria";
-  src: url("../../fonts/Geometria.eot");
-  src: url("../../fonts/Geometria.eot?#iefix") format("embedded-opentype"), url("../../fonts/Geometria.woff2") format("woff2"), url("../../fonts/Geometria.woff") format("woff"), url("../../fonts/Geometria.ttf") format("truetype"), url("../../fonts/Geometria.svg#Geometria") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Geometria";
-  src: url("../../fonts/Geometria-Light.eot");
-  src: url("../../fonts/Geometria-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Geometria-Light.woff2") format("woff2"), url("../../fonts/Geometria-Light.woff") format("woff"), url("../../fonts/Geometria-Light.ttf") format("truetype"), url("../../fonts/Geometria-Light.svg#Geometria-Light") format("svg");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 .btn {
-  height: 78px;
+  padding: 28px 0;
   border-radius: 10px;
   font-size: 17px;
   line-height: 24px;
@@ -488,10 +460,10 @@ body {
 }
 
 .section__title {
-  margin-top: 80px;
   font-weight: bold;
   font-size: 30px;
   line-height: 131.3%;
+  margin-bottom: 30px;
 }
 .section__slogan {
   margin-top: 65px;
@@ -527,6 +499,38 @@ body {
   color: #000000;
 }
 
+@font-face {
+  font-family: "Geometria";
+  src: url("../../fonts/Geometria-Bold.eot");
+  src: url("../../fonts/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Geometria-Bold.woff2") format("woff2"), url("../../fonts/Geometria-Bold.woff") format("woff"), url("../../fonts/Geometria-Bold.ttf") format("truetype"), url("../../fonts/Geometria-Bold.svg#Geometria-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geometria";
+  src: url("../../fonts/Geometria-Medium.eot");
+  src: url("../../fonts/Geometria-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Geometria-Medium.woff2") format("woff2"), url("../../fonts/Geometria-Medium.woff") format("woff"), url("../../fonts/Geometria-Medium.ttf") format("truetype"), url("../../fonts/Geometria-Medium.svg#Geometria-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geometria";
+  src: url("../../fonts/Geometria.eot");
+  src: url("../../fonts/Geometria.eot?#iefix") format("embedded-opentype"), url("../../fonts/Geometria.woff2") format("woff2"), url("../../fonts/Geometria.woff") format("woff"), url("../../fonts/Geometria.ttf") format("truetype"), url("../../fonts/Geometria.svg#Geometria") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geometria";
+  src: url("../../fonts/Geometria-Light.eot");
+  src: url("../../fonts/Geometria-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Geometria-Light.woff2") format("woff2"), url("../../fonts/Geometria-Light.woff") format("woff"), url("../../fonts/Geometria-Light.ttf") format("truetype"), url("../../fonts/Geometria-Light.svg#Geometria-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -561,11 +565,12 @@ body {
   line-height: 18px;
 }
 .topbar__phone {
+  position: relative;
   display: flex;
   align-items: center;
   font-weight: normal;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 19px;
   color: #545454;
   background: transparent;
   font-weight: 400;
@@ -573,6 +578,15 @@ body {
 .topbar__phone:hover, .topbar__phone:hover span {
   transition: 0.2s all;
   color: #6D86E0;
+}
+.topbar__phone::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -35px;
+  top: 1px;
+  background: url(../img/icons/icon-phone.svg);
 }
 .topbar__phone img {
   padding-right: 15px;
@@ -587,7 +601,7 @@ body {
 .main {
   padding-top: 30px;
   background: #FAFBFF;
-  padding-bottom: 118px;
+  padding-bottom: 116px;
 }
 .main__image {
   position: absolute;
@@ -611,7 +625,7 @@ body {
   align-items: center;
   font-weight: 500;
   font-size: 14px;
-  margin-bottom: 45px;
+  margin-bottom: 43px;
 }
 .main__slogan span {
   margin-right: 5px;
@@ -637,7 +651,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  margin-bottom: 41px;
+  margin-bottom: 43px;
 }
 .main__result {
   display: flex;
@@ -645,8 +659,8 @@ body {
   margin: 0 auto;
   width: 354px;
   height: 83px;
-  background: #FFFFFF url(../img/bg-228.png) left no-repeat;
-  background-size: 64px;
+  background: #FFFFFF url(../img/bg-228.png) 2px no-repeat;
+  background-size: 60px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
 }
@@ -660,24 +674,13 @@ body {
   align-items: center;
 }
 .main__result-text {
-  margin-left: 20px;
+  margin-left: 18px;
   line-height: 147%;
+  letter-spacing: 0.32px;
 }
 
 .request {
   position: relative;
-}
-.request-price::after {
-  position: absolute;
-  content: "";
-  background: url(../img/points.svg) no-repeat;
-  right: 1296px;
-  top: 360px;
-  width: 475px;
-  height: 145px;
-}
-.request-price .request__form {
-  background: #6D86E0 url(../img/icon-bg-calculator.svg) no-repeat right -60px bottom -30px;
 }
 .request-payback .request__title {
   margin-bottom: 54px;
@@ -691,11 +694,11 @@ body {
 .request-discount .request__form {
   background: #6D86E0 url(../img/icon-bg-percentage.svg) no-repeat right 0px bottom 0px;
 }
-.request__wrapper {
+.request__container {
   display: flex;
 }
 .request__title {
-  width: 432px;
+  width: 450px;
 }
 .request__text {
   font-weight: normal;
@@ -729,41 +732,6 @@ body {
   height: 55px;
   top: -15px;
   background: url(../img/icon-arrow-right.svg) no-repeat center;
-}
-.request__half-edit {
-  margin-top: 40px;
-}
-.request__services {
-  width: 417px;
-  height: 226px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 0 40px;
-  border-radius: 20px;
-  background: #FAFAFA;
-}
-.request__services-item {
-  width: 100%;
-  position: relative;
-  font-size: 16px;
-  line-height: 148%;
-  color: #000000;
-}
-.request__services-item:not(:last-child)::after {
-  position: absolute;
-  content: "";
-  width: 342px;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 1px;
-  background: #000000;
-  opacity: 0.1;
-}
-.request__services-item-img {
-  vertical-align: middle;
-  margin-right: 12px;
 }
 .request__consultation {
   position: relative;
@@ -813,25 +781,84 @@ body {
   background: #F2F5FF url(../img/icon-percentage.svg) no-repeat center;
   border-radius: 50%;
 }
-.request__form {
-  margin-left: 76px;
+
+.request-price__wrapper {
+  position: relative;
+  padding: 50px 0;
+  margin-right: 57px;
+}
+.request-price__wrapper-edit {
+  margin-top: 40px;
+}
+.request-price__wrapper::after {
+  position: absolute;
+  content: "";
+  background: url(../img/points.svg) no-repeat;
+  left: -288px;
+  top: 360px;
+  width: 475px;
+  height: 145px;
+}
+.request-price__services {
+  width: 417px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 40px;
+  border-radius: 20px;
+  background: #FAFAFA;
+}
+.request-price__service {
+  padding: 25px 0 26px 37px;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  line-height: 148%;
+  color: #000000;
+}
+.request-price__service:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.request-price__service::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  left: 0;
+}
+.request-price__service--select::before {
+  background: url(../img/icons/tasks.svg) no-repeat center;
+}
+.request-price__service--calculate::before {
+  background: url(../img/icons/introduction.svg) no-repeat center;
+}
+.request-price__service--payback::before {
+  background: url(../img/icons/payback.svg) no-repeat center;
+}
+
+.request-form {
+  margin-left: 75px;
   color: #FFFFFF;
   height: 100%;
-  padding: 84px 300px 84px 95px;
-  border-radius: 40px 0px 0px 40px;
+  padding: 82px 300px 85px 20px;
 }
-.request__form-title {
+.request-form__wrapper {
+  border-radius: 40px 0px 0px 40px;
+  background: #6D86E0 url(../img/icon-bg-calculator.svg) no-repeat left 506px bottom -30px;
+}
+.request-form__title {
   font-size: 18px;
   line-height: 163.8%;
   text-align: center;
-  margin-bottom: 31px;
+  margin-bottom: 32px;
+  line-height: 163.8%;
 }
-.request__form-label {
+.request-form__label {
   font-size: 12px;
   text-align: left;
 }
-.request__form-wrap {
-  padding: 8px 24px;
+.request-form__fieldset {
+  padding: 8px 26px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -842,31 +869,48 @@ body {
   height: 80px;
   margin-bottom: 30px;
 }
-.request__form-wrap input {
-  color: #FFFFFF;
-  background: transparent;
+.request-form__input {
   border: none;
   font-size: 18px;
+  color: #FFFFFF;
+  background: transparent;
+  letter-spacing: 0.1px;
 }
-.request__form-wrap input::placeholder {
+.request-form__input::placeholder {
   color: #FFFFFF;
 }
-.request__form-btn {
-  width: 338px;
-  margin-bottom: 22px;
+.request-form__input-wrapper {
+  position: relative;
+  padding-left: 27px;
+}
+.request-form__input-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  display: block;
+  left: 2px;
+  top: 2px;
+  background: url(../img/icons/phone-white.svg);
+}
+.request-form__btn {
+  max-width: 338px;
+  width: 100%;
+  margin-bottom: 18px;
   cursor: pointer;
   color: #6D86E0;
 }
-.request__form-btn:hover {
+.request-form__btn:hover {
   background-color: #e6e6e6;
 }
-.request__form-checkbox {
-  margin-left: 39px;
+.request-form__checkbox {
+  margin-left: 36px;
   padding-left: 5px;
   user-select: none;
   cursor: pointer;
+  font-size: 14px;
 }
-.request__form-checkbox::before {
+.request-form__checkbox::before {
   content: "";
   display: inline-block;
   width: 17px;
@@ -1074,4 +1118,24 @@ input[type=checkbox]:checked + label:before {
 }
 .advantages__description span {
   font-weight: 500;
+}
+
+.footer {
+  color: #fff;
+  background-color: #2F3C69;
+}
+
+.scroll-down {
+  position: fixed;
+  top: 37.35%;
+  left: 13.8%;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  color: #000;
+  font-family: Geometria;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 147.3%;
+  letter-spacing: 0.6px;
 }/*# sourceMappingURL=style.css.map */

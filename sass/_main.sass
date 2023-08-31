@@ -26,11 +26,12 @@
       font-size: 12px
       line-height: 18px
   &__phone
+    position: relative
     display: flex
     align-items: center
     font-weight: normal
     font-size: 16px
-    line-height: 20px
+    line-height: 19px
     color: $color-phone
     background: transparent
     font-weight: 400
@@ -38,6 +39,14 @@
     &:hover span
       transition: .2s all
       color: $color-main
+    &::before
+      content: ""
+      position: absolute
+      width: 20px
+      height: 20px
+      left: -35px
+      top: 1px
+      background: url(../img/icons/icon-phone.svg)
     img
       padding-right: 15px
     span
@@ -51,7 +60,7 @@
 .main
   padding-top: 30px
   background: $bg-section-prime
-  padding-bottom: 118px
+  padding-bottom: 116px
   &__image
     position: absolute
     left: 500px
@@ -71,7 +80,7 @@
     align-items: center
     font-weight: 500
     font-size: 14px
-    margin-bottom: 45px
+    margin-bottom: 43px
     span
       margin-right: 5px
       font-weight: bold
@@ -93,15 +102,15 @@
     font-size: 16px
     line-height: 24px
     letter-spacing: 0.02em
-    margin-bottom: 41px
+    margin-bottom: 43px
   &__result
     display: flex
     align-items: center
     margin: 0 auto
     width: 354px
     height: 83px
-    background: $bg-section-second url(../img/bg-228.png) left no-repeat
-    background-size: 64px
+    background: $bg-section-second url(../img/bg-228.png) 2px no-repeat
+    background-size: 60px
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05)
     border-radius: 15px
     &-img
@@ -112,6 +121,7 @@
       display: flex
       align-items: center
     &-text
-      margin-left: 20px
+      margin-left: 18px
       line-height: 147%
+      letter-spacing: 0.32px
 
