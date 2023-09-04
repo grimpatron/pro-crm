@@ -1,6 +1,5 @@
 .request
   position: relative
-  &-price
   &-payback
     .request__title
       margin-bottom: 54px
@@ -87,7 +86,10 @@
       left: -70px
       background: $bg-arrows url(../img/icon-percentage.svg) no-repeat center
       border-radius: 50%
-
+.request__half-edit
+  margin-top: 40px
+    // .request__title
+    //   margin-top: 50px
 
 
 .request-price
@@ -95,18 +97,14 @@
     position: relative
     padding: 50px 0
     margin-right: 57px
-    &-edit  // Что это?
-      margin-top: 40px
-    // .request__title
-    //   margin-top: 50px
     &::after
       position: absolute
       content: ""
-      background: url(../img/points.svg) no-repeat
+      background: url(../img/backgrounds/points-1.svg) no-repeat
       left: -288px
-      top: 360px
+      top: 361px
       width: 475px
-      height: 145px
+      height: 180px
   &__services
     width: 417px
     display: flex
@@ -136,6 +134,7 @@
       background: url(../img/icons/introduction.svg) no-repeat center
     &--payback::before
       background: url(../img/icons/payback.svg) no-repeat center
+
 
 .request-form
   margin-left: 75px
@@ -209,7 +208,8 @@
       background-color: #F6F6F6
       border-radius: 50%
       vertical-align: middle
-  
+
+
 input[type="checkbox"]
   display: none
 

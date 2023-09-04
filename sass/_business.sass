@@ -1,96 +1,148 @@
 .business
-  padding-top: 30px
+  padding-top: 81px
   background: $bg-section-prime
-  &__wrapp
+  &__container
     display: flex
     align-items: center
+    margin-bottom: 60px
   &__title
     font-size: 35px
     line-height: 128.8%
     width: 380px
+  &__slogan
+    margin-top: 10px
+    margin-left: 180px
+    position: relative
+    width: 420px
+    line-height: 25px
+    &::after
+      position: absolute
+      content: ""
+      height: 3px
+      width: 34px
+      top: 10px
+      left: -34px
+      transform: translateX(-50%)
+      background: $color-main
+      border-radius: 1px
+  &__subtitle
+    font-weight: bold
+    font-size: 25px
+    line-height: 31px
+    color: $color-main
+    margin-bottom: 23px
+  &__text
+    max-width: 760px
+    font-weight: normal
+    font-size: 20px
+    line-height: 156.3%
+    color: $color-black
+    margin-bottom: 102px
 
 
-.introduction
-  margin-top: 104px
+.comparison
   margin-bottom: 136px
-  max-width: 507px
+  max-width: 508px
   width: 100%
-  padding: 60px 40px 12px
+  padding: 60px 40px 7px
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05)
   border-radius: 20px
   text-align: center
-  &__wrapper
+  &--before
+    background: $bg-section-second
+  &--after
+    background: $color-main
+  &__container
     position: relative
     display: flex
     justify-content: space-between
     &::after
       position: absolute
       content: ""
-      background: url(../img/points-2.svg) no-repeat
-      bottom: -125px
-      right: -200px
+      background: url(../img/backgrounds/points-3.svg) no-repeat
+      bottom: -126px
+      right: -208px
       width: 475px
       height: 145px
+  &__title
+    font-size: 25px
+    margin-bottom: 58px
+    line-height: 22px
+    &--after
+      color: #fff
   &__box
     display: flex
     flex-direction: row
     flex-wrap: wrap
     justify-content: space-between
-  &__before
-    background: $bg-section-second
-    color: $color-black
-    &-item
-      padding: 30px 10px
-      margin-bottom: 30px
-      width: 200px
-      height: 160px
+  &__item
+    position: relative
+    width: 200px
+    height: 160px
+    padding:80px 10px 10px
+    border-radius: 20px 0px
+    margin-bottom: 30px
+    &--before
       background: $bg-neutral
-      border-radius: 20px 0px
-      &--active
-        background-color: $color-second
-        color: $color-white
-    &-name
-      font-weight: 500
-      font-size: 12px
-      line-height: 15px
-      text-align: center
-      letter-spacing: 0.04em
-      text-transform: uppercase
-      color: $color-main
-      margin: 15px 0 0
-      &--active
-        color: $color-white
-  &__after
-    background: $color-main
-    color: $color-white
-    &-item
-      padding: 30px 10px
-      margin-bottom: 30px
-      display: inline-block
-      width: 200px
-      height: 160px
+      color: $color-black
+    &--after
       background: $color-prime
-      border-radius: 20px 0px
-      &--active
-        background-color: $bg-section-second
-        color: $color-black
-    &-name
-      font-weight: 500
-      font-size: 12px
-      line-height: 15px
-      text-align: center
-      letter-spacing: 0.04em
-      text-transform: uppercase
       color: $color-white
-      margin: 15px 0 0
+    &--profit
+      background-color: $color-second
+      color: $color-white
+    &--profit-after
+      background-color: $bg-section-second
+      color: $color-black
+    &::before
+      position: absolute
+      content: ""
+      width: 36px
+      height: 36px
+      top: 30px
+      left: 50%
+      transform: translateX(-50%)
+    &--receipt::before
+      background: url(../img/icons/comparison/receipt.svg) center no-repeat
+    &--receipt-after::before
+      background: url(../img/icons/comparison/receipt-alt.svg) center no-repeat
+    &--applications::before
+      background: url(../img/icons/comparison/applications.svg) center no-repeat
+    &--applications-after::before
+      background: url(../img/icons/comparison/applications-alt.svg) center no-repeat
+    &--analitics::before
+      background: url(../img/icons/comparison/analitics.svg) center no-repeat
+    &--analitics-after::before
+      background: url(../img/icons/comparison/analitics-alt.svg) center no-repeat
+    &--deal::before
+      background: url(../img/icons/comparison/deal.svg) center no-repeat
+    &--deal-after::before
+      background: url(../img/icons/comparison/deal-alt.svg) center no-repeat
+    &--turnover::before
+      background: url(../img/icons/comparison/turnover.svg) center no-repeat
+    &--turnover-after::before
+      background: url(../img/icons/comparison/turnover-alt.svg) center no-repeat
+    &--profit::before
+      background: url(../img/icons/comparison/money.svg) center no-repeat
+    &--profit-after::before
+      background: url(../img/icons/comparison/money-alt.svg) center no-repeat
+
+  &__name
+    margin-bottom: 4px
+    font-weight: 500
+    font-size: 12px
+    line-height: 15px
+    text-align: center
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    &--before
+      color: $color-main
+      &-active
+        color: $color-white
+    &-after
+      color: $color-white
       &--active
         color: $color-black
-  &__title
-    font-size: 25px
-    line-height: 20px
-    margin-bottom: 56px
-  &__image
-    margin-top: 8px
   &__value
     font-size: 24px
-    font-weight: bold
+    font-weight: 500
